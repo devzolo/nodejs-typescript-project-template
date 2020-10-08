@@ -3,6 +3,6 @@ require('dotenv').config({ path: path.resolve(__dirname, '.env.test') });
 
 describe('Example Test', () => {
   it('basic test', () => {
-    expect(1).not.toBe(1);
+    expect(1).toBe(1);
   });
 });
