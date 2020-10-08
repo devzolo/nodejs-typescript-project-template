@@ -1,6 +1,10 @@
+import debugLib from 'debug';
+
+const debug = debugLib('teste');
+
 async function main(): Promise<void> {
   const str = 'Hello World!';
-  console.log(str);
+  debug(str);
 
   if (process.env.NODE_ENV === 'development') {
     await new Promise(() => 0);

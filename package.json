@@ -5,9 +5,8 @@
   "repository": "https://github.com/devzolo/nodejs-typescript-project-template.git",
   "author": "Raphael-ZoLo <zolotorevsky@gmail.com>",
   "license": "MIT",
-
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/index.ts",
+    "dev": "cross-env NODE_ENV=development DEBUG=* ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/index.ts",
     "start": "cross-env NODE_ENV=production ts-node-dev src/index.ts",
     "build": "rimraf dist && tsc",
     "preprod": "yarn build",
@@ -15,9 +14,11 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "debug": "^4.2.0"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.5",
     "@types/jest": "^25.1.2",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
