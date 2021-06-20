@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'development') {
   exec.finally(
     clearInterval.bind(
       null,
-      setInterval(a => a, 1e9),
-    ),
+      setInterval(a => a, 1e9)
+    )
   );
 }
