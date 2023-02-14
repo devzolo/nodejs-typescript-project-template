@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/nodemon",
+  "quiet": false,
+  "verbose": true,
+  "ignore": ["node_modules", "dist", "src/**/*.spec.ts"],
+  "watch": ["src"],
+  "ext": "*.ts,*.json",
+  "execMap": {
+    "ts": "cross-env DEBUG=teste* node --require @swc-node/register"
+  }
+}
